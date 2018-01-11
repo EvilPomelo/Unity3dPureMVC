@@ -32,17 +32,17 @@ namespace PureMVC.Patterns
 	/// <see cref="PureMVC.Patterns.Notification"/>
 	public class Observer : IObserver
 	{
-		#region Constructors
+        #region Constructors(构造方法中给m_notifyMethod和m_notifyContext赋值)
 
-		/// <summary>
-		/// Constructs a new observer with the specified notification method and context
-		/// </summary>
-		/// <param name="notifyMethod">The notification method of the interested object</param>
-		/// <param name="notifyContext">The notification context of the interested object</param>
-		/// <remarks>
-		///     <para>The notification method on the interested object should take on parameter of type <c>INotification</c></para>
-		/// </remarks>
-		public Observer(string notifyMethod, object notifyContext)
+        /// <summary>
+        /// Constructs a new observer with the specified notification method and context
+        /// </summary>
+        /// <param name="notifyMethod">The notification method of the interested object</param>
+        /// <param name="notifyContext">The notification context of the interested object</param>
+        /// <remarks>
+        ///     <para>The notification method on the interested object should take on parameter of type <c>INotification</c></para>
+        /// </remarks>
+        public Observer(string notifyMethod, object notifyContext)
 		{
 			m_notifyMethod = notifyMethod;
 			m_notifyContext = notifyContext;
@@ -92,18 +92,18 @@ namespace PureMVC.Patterns
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#endregion
+        #endregion
 
-		#region Accessors
+        #region Accessors(NotifyMethod与NotifyContext属性)
 
-		/// <summary>
-		/// The notification (callback) method of the interested object
-		/// </summary>
-		/// <remarks>The notification method should take one parameter of type <c>INotification</c></remarks>
-		/// <remarks>This accessor is thread safe</remarks>
-		public virtual string NotifyMethod
+        /// <summary>
+        /// The notification (callback) method of the interested object
+        /// </summary>
+        /// <remarks>The notification method should take one parameter of type <c>INotification</c></remarks>
+        /// <remarks>This accessor is thread safe</remarks>
+        public virtual string NotifyMethod
 		{
 			private get
 			{
@@ -135,14 +135,14 @@ namespace PureMVC.Patterns
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Members
+        #region Members(私有成员变量m_notifyMethod和m_notifyContext)
 
-		/// <summary>
-		/// Holds the notify method name.
-		/// </summary>
-		private string m_notifyMethod;
+        /// <summary>
+        /// Holds the notify method name.
+        /// </summary>
+        private string m_notifyMethod;
 
 		/// <summary>
 		/// Holds the notify context.

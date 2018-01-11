@@ -10,6 +10,9 @@ using System;
 
 #endregion
 
+/// <summary>
+/// 消息接口，只包含了3个属性，Name(消息名)，Body(消息传递对象)，Type(消息类型)，以及一个ToString方法。
+/// </summary>
 namespace PureMVC.Interfaces
 {
     /// <summary>

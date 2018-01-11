@@ -25,9 +25,9 @@ namespace PureMVC.Patterns
 	/// <see cref="PureMVC.Patterns.Observer"/>
     public class Notification : INotification
 	{
-		#region Constructors
+        #region Constructors(三个构造方法，分别是只赋值方法名，赋值方法名与传递对象，赋值方法名，传递对象与方法类型)
 
-		/// <summary>
+        /// <summary>
         /// Constructs a new notification with the specified name, default body and type
         /// </summary>
         /// <param name="name">The name of the <c>Notification</c> instance</param>
@@ -57,15 +57,15 @@ namespace PureMVC.Patterns
 			m_type = type;
 		}
 
-		#endregion
+        #endregion
 
-		#region Public Methods
+        #region Public Methods(重写的TosSring方法）
 
-		/// <summary>
-		/// Get the string representation of the <c>Notification instance</c>
-		/// </summary>
-		/// <returns>The string representation of the <c>Notification</c> instance</returns>
-		public override string ToString()
+        /// <summary>
+        /// Get the string representation of the <c>Notification instance</c>
+        /// </summary>
+        /// <returns>The string representation of the <c>Notification</c> instance</returns>
+        public override string ToString()
 		{
 			string msg = "Notification Name: " + Name;
 			msg += "\nBody:" + ((Body == null) ? "null" : Body.ToString());
@@ -73,14 +73,14 @@ namespace PureMVC.Patterns
 			return msg;
 		}
 
-		#endregion
+        #endregion
 
-		#region Accessors
+        #region Accessors(从父类重写的虚属性)
 
-		/// <summary>
+        /// <summary>
         /// The name of the <c>Notification</c> instance
         /// </summary>
-		public virtual string Name
+        public virtual string Name
 		{
 			get { return m_name; }
 		}
@@ -121,14 +121,14 @@ namespace PureMVC.Patterns
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Members
+        #region Members(与属性关联的私有成员)
 
-		/// <summary>
+        /// <summary>
         /// The name of the notification instance 
         /// </summary>
-		private string m_name;
+        private string m_name;
 
         /// <summary>
         /// The type of the notification instance

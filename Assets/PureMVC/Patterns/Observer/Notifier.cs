@@ -31,17 +31,17 @@ namespace PureMVC.Patterns
 	/// <see cref="PureMVC.Patterns.MacroCommand"/>
     public class Notifier : INotifier
     {
-		#region Public Methods
+        #region Public Methods
 
-		#region INotifier Members
+        #region INotifier Members(通过三组不同参数的SendNotification调用facade单例中的SendNotification)
 
-		/// <summary>
+        /// <summary>
         /// Send an <c>INotification</c>
         /// </summary>
         /// <param name="notificationName">The name of the notiification to send</param>
         /// <remarks>Keeps us from having to construct new notification instances in our implementation code</remarks>
-		/// <remarks>This method is thread safe</remarks>
-		public virtual void SendNotification(string notificationName) 
+        /// <remarks>This method is thread safe</remarks>
+        public virtual void SendNotification(string notificationName) 
 		{
 			// The Facade SendNotification is thread safe, therefore this method is thread safe.
 			m_facade.SendNotification(notificationName);
@@ -74,23 +74,23 @@ namespace PureMVC.Patterns
             m_facade.SendNotification(notificationName, body, type);
 		}
 
-		#endregion
+        #endregion
 
-		#endregion
+        #endregion
 
-		#region Accessors
+        #region Accessors(声明Facade属性，暴露给外部)
 
-		/// <summary>
-		/// Local reference to the Facade Singleton
-		/// </summary>
-		protected IFacade Facade
+        /// <summary>
+        /// Local reference to the Facade Singleton
+        /// </summary>
+        protected IFacade Facade
 		{
 			get { return m_facade; }
 		}
 
 		#endregion
 
-		#region Members
+		#region Members （给m_facade私有变量赋值为Facade单例）
 
 		/// <summary>
         /// Local reference to the Facade Singleton
