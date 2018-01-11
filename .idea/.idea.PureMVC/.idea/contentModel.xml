@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\JingMin\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_PureMVC.-1601085625.00" t="ExcludeRecursive" />
+    <e p="D:\Git项目\PureMVC" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="PureMVC" t="Include">
+          <e p="Core" t="Include">
+            <e p="Controller.cs" t="Include" />
+            <e p="Model.cs" t="Include" />
+            <e p="View.cs" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="ICommand.cs" t="Include" />
+            <e p="IController.cs" t="Include" />
+            <e p="IFacade.cs" t="Include" />
+            <e p="IMediator.cs" t="Include" />
+            <e p="IModel.cs" t="Include" />
+            <e p="INotification.cs" t="Include" />
+            <e p="INotifier.cs" t="Include" />
+            <e p="IObserver.cs" t="Include" />
+            <e p="IProxy.cs" t="Include" />
+            <e p="IView.cs" t="Include" />
+          </e>
+          <e p="Patterns" t="Include">
+            <e p="Command" t="Include">
+              <e p="MacroCommand.cs" t="Include" />
+              <e p="SimpleCommand.cs" t="Include" />
+            </e>
+            <e p="Facade" t="Include">
+              <e p="Facade.cs" t="Include" />
+            </e>
+            <e p="Mediator" t="Include">
+              <e p="Mediator.cs" t="Include" />
+            </e>
+            <e p="Observer" t="Include">
+              <e p="Notification.cs" t="Include" />
+              <e p="Notifier.cs" t="Include" />
+              <e p="Observer.cs" t="Include" />
+            </e>
+            <e p="Proxy" t="Include">
+              <e p="Proxy.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Test" t="Include">
+          <e p="ApplicationFacade.cs" t="Include" />
+          <e p="DataCommand.cs" t="Include" />
+          <e p="DataMediator.cs" t="Include" />
+          <e p="DataProxy.cs" t="Include" />
+          <e p="MyData.cs" t="Include" />
+          <e p="StartGame.cs" t="Include" />
+        </e>
+        <e p="test.cs" t="Include" />
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="PureMVC.sln" t="IncludeFlat" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
