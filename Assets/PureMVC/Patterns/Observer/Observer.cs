@@ -70,8 +70,9 @@ namespace PureMVC.Patterns
 				context = NotifyContext;
 				method = NotifyMethod;
 			}
-
+			//获取contex的类型
 			Type t = context.GetType();
+			//指定BindingFlags的值，最后根据f来判断获取哪一个方法
 			BindingFlags f = BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase;
 			MethodInfo mi = t.GetMethod(method, f);
 			mi.Invoke(context, new object[] { notification });

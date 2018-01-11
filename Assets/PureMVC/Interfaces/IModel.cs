@@ -13,42 +13,38 @@ using System;
 namespace PureMVC.Interfaces
 {
     /// <summary>
-    /// The interface definition for a PureMVC Model
+    /// PureMVC Model的接口定义
     /// </summary>
     /// <remarks>
-    ///     <para>In PureMVC, <c>IModel</c> implementors provide access to <c>IProxy</c> objects by named lookup</para>
-    ///     <para>An <c>IModel</c> assumes these responsibilities:</para>
-    ///     <list type="bullet">
-    ///         <item>Maintain a cache of <c>IProxy</c> instances</item>
-    ///         <item>Provide methods for registering, retrieving, and removing <c>IProxy</c> instances</item>
-    ///     </list>
+    /// 在IMode中定义了一系列与Iproxy相关的方法
     /// </remarks>
     public interface IModel
     {
         /// <summary>
-        /// Register an <c>IProxy</c> instance with the <c>Model</c>
+        /// 注册一个<c>IProxy</c>实例给<c>Model</c>
         /// </summary>
-        /// <param name="proxy">A reference to the proxy object to be held by the <c>Model</c></param>
+        /// <param name="proxy">一个Iprxy的示例 </param>
 		void RegisterProxy(IProxy proxy);
 
         /// <summary>
-        /// Retrieve an <c>IProxy</c> instance from the Model
+        /// 从Model中取得一个名字为proxy<c>IProxy</c>的实例
         /// </summary>
-        /// <param name="proxyName">The name of the proxy to retrieve</param>
-        /// <returns>The <c>IProxy</c> instance previously registered with the given <c>proxyName</c></returns>
+        /// <param name="proxyName">名字为所需取得的Proxy实例</param>
+        /// <returns>返回先前注册过的名字为proxyName实例</returns>
 		IProxy RetrieveProxy(string proxyName);
 
         /// <summary>
-        /// Remove an <c>IProxy</c> instance from the Model
+        /// 从Model中删除一个名字为proxyName的<c>Iproxy</c>实例
         /// </summary>
-        /// <param name="proxyName">The name of the <c>IProxy</c> instance to be removed</param>
+        /// <param name="proxyName">需要删除的名字</param>
+        ///<returns>返回删除的Iproxy实例</returns>
         IProxy RemoveProxy(string proxyName);
 
 		/// <summary>
-		/// Check if a Proxy is registered
+		/// 查看该proxyName是否被注册
 		/// </summary>
-		/// <param name="proxyName">The name of the proxy to check for</param>
-		/// <returns>whether a Proxy is currently registered with the given <c>proxyName</c>.</returns>
+		/// <param name="proxyName">需要查询的名字</param>
+		/// <returns>>返回一个Bool值代表是否查询到</returns>
 		bool HasProxy(string proxyName);
     }
 }

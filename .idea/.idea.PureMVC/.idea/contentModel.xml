@@ -3,8 +3,16 @@
   <component name="ContentModelStore">
     <e p="C:\Users\JingMin\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_PureMVC.-1601085625.00" t="ExcludeRecursive" />
     <e p="D:\Git项目\PureMVC" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="Editor" t="Include">
+            <e p="JetBrains" t="Include">
+              <e p="Unity3DRider.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="PureMVC" t="Include">
           <e p="Core" t="Include">
             <e p="Controller.cs" t="Include" />
@@ -53,6 +61,7 @@
           <e p="StartGame.cs" t="Include" />
         </e>
         <e p="test.cs" t="Include" />
+        <e p="XML注释详解.txt" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
