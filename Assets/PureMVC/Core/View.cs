@@ -38,15 +38,14 @@ namespace PureMVC.Core
 		#region Constructors
 
 		/// <summary>
-        /// Constructs and initializes a new view
-        /// </summary>
-        /// <remarks>
-        /// <para>This <c>IView</c> implementation is a Singleton, so you should not call the constructor directly, but instead call the static Singleton Factory method <c>View.Instance</c></para>
-        /// </remarks>
+		/// 该类的构造函数
+		/// </summary>
 		protected View()
 		{
+			//初始化两个字典存储Mediator和Observer
 			m_mediatorMap = new Dictionary<string, IMediator>();
 			m_observerMap = new Dictionary<string, IList<IObserver>>();
+			//View类初始化函数
             InitializeView();
 		}
 
@@ -59,11 +58,10 @@ namespace PureMVC.Core
 		#region Observer
 
 		/// <summary>
-		/// Register an <c>IObserver</c> to be notified of <c>INotifications</c> with a given name
+		/// 通过给定的消息名和观察者注册观察者
 		/// </summary>
-		/// <param name="notificationName">The name of the <c>INotifications</c> to notify this <c>IObserver</c> of</param>
-		/// <param name="observer">The <c>IObserver</c> to register</param>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="notificationName"></param>
+		/// <param name="observer"></param>
 		public virtual void RegisterObserver(string notificationName, IObserver observer)
 		{
 			lock (m_syncRoot)
