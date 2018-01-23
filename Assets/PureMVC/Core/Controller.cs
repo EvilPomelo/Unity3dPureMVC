@@ -237,7 +237,7 @@ namespace PureMVC.Core
 		protected readonly object m_syncRoot = new object();
 
 		/// <summary>
-		/// Used for locking the instance calls
+		/// 用来锁住单例实例
 		/// </summary>
 		protected static readonly object m_staticSyncRoot = new object();
 

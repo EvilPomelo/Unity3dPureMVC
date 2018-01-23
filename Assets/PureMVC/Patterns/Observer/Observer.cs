@@ -15,33 +15,19 @@ using PureMVC.Interfaces;
 
 namespace PureMVC.Patterns
 {
-    /// <summary>
-    /// A base <c>IObserver</c> implementation
-    /// </summary>
-    /// <remarks>
-    ///     <para>An <c>Observer</c> is an object that encapsulates information about an interested object with a method that should be called when a particular <c>INotification</c> is broadcast</para>
-    ///     <para>In PureMVC, the <c>Observer</c> class assumes these responsibilities:</para>
-    ///     <list type="bullet">
-    ///         <item>Encapsulate the notification (callback) method of the interested object</item>
-    ///         <item>Encapsulate the notification context (this) of the interested object</item>
-    ///         <item>Provide methods for setting the notification method and context</item>
-    ///         <item>Provide a method for notifying the interested object</item>
-    ///     </list>
-    /// </remarks>
-	/// <see cref="PureMVC.Core.View"/>
-	/// <see cref="PureMVC.Patterns.Notification"/>
+	/// <summary>
+	/// 三个成员变量（传递的方法名，上下文对象，对象锁），两个属性（传递的方法名，上下文对象）
+	/// 一个构造函数
+	/// </summary>
 	public class Observer : IObserver
 	{
         #region Constructors(构造方法中给m_notifyMethod和m_notifyContext赋值)
 
-        /// <summary>
-        /// Constructs a new observer with the specified notification method and context
-        /// </summary>
-        /// <param name="notifyMethod">The notification method of the interested object</param>
-        /// <param name="notifyContext">The notification context of the interested object</param>
-        /// <remarks>
-        ///     <para>The notification method on the interested object should take on parameter of type <c>INotification</c></para>
-        /// </remarks>
+       /// <summary>
+       ///Obeserver的构造方法
+       /// </summary>
+       /// <param name="notifyMethod"></param>
+       /// <param name="notifyContext"></param>
         public Observer(string notifyMethod, object notifyContext)
 		{
 			m_notifyMethod = notifyMethod;
@@ -55,10 +41,9 @@ namespace PureMVC.Patterns
 		#region IObserver Members
 
 		/// <summary>
-		/// Notify the interested object
+		/// 发送消息给所有感兴趣的对象
 		/// </summary>
-		/// <remarks>This method is thread safe</remarks>
-		/// <param name="notification">The <c>INotification</c> to pass to the interested object's notification method</param>
+		/// <param name="notification"></param>
 		public virtual void NotifyObserver(INotification notification)
 		{
 			object context;
@@ -79,11 +64,10 @@ namespace PureMVC.Patterns
 		}
 
 		/// <summary>
-		/// Compare an object to the notification context
+		/// 比较传入对象
 		/// </summary>
-		/// <remarks>This method is thread safe</remarks>
-		/// <param name="obj">The object to compare</param>
-		/// <returns>Indicating if the object and the notification context are the same</returns>
+		/// <param name="obj"></param>
+		/// <returns></returns>
 		public virtual bool CompareNotifyContext(object obj)
 		{
 			lock (m_syncRoot)
@@ -100,20 +84,16 @@ namespace PureMVC.Patterns
         #region Accessors(NotifyMethod与NotifyContext属性)
 
         /// <summary>
-        /// The notification (callback) method of the interested object
+        /// 方法
         /// </summary>
-        /// <remarks>The notification method should take one parameter of type <c>INotification</c></remarks>
-        /// <remarks>This accessor is thread safe</remarks>
         public virtual string NotifyMethod
 		{
 			private get
 			{
-				// Setting and getting of reference types is atomic, no need to lock here
 				return m_notifyMethod;
 			}
 			set
 			{
-				// Setting and getting of reference types is atomic, no need to lock here
 				m_notifyMethod = value;
 			}
 		}
@@ -126,12 +106,10 @@ namespace PureMVC.Patterns
 		{
 			private get
 			{
-				// Setting and getting of reference types is atomic, no need to lock here
 				return m_notifyContext;
 			}
 			set
 			{
-				// Setting and getting of reference types is atomic, no need to lock here
 				m_notifyContext = value;
 			}
 		}
@@ -141,17 +119,17 @@ namespace PureMVC.Patterns
         #region Members(私有成员变量m_notifyMethod和m_notifyContext)
 
         /// <summary>
-        /// Holds the notify method name.
+        /// 持有的需要传递的方法名
         /// </summary>
         private string m_notifyMethod;
 
 		/// <summary>
-		/// Holds the notify context.
+		/// 持有及需传递的上下文对象
 		/// </summary>
 		private object m_notifyContext;
 
 		/// <summary>
-		/// Used for locking
+		/// 对象锁
 		/// </summary>
 		protected readonly object m_syncRoot = new object();
 

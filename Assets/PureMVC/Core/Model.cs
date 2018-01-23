@@ -18,23 +18,6 @@ namespace PureMVC.Core
     /// <summary>
     /// IModel的单例实现
     /// </summary>
-    /// <remarks>
-    ///     <para>In PureMVC, the <c>Model</c> class provides access to model objects (Proxies) by named lookup</para>
-    ///     <para>The <c>Model</c> assumes these responsibilities:</para>
-    ///     <list type="bullet">
-    ///         <item>Maintain a cache of <c>IProxy</c> instances</item>
-    ///         <item>Provide methods for registering, retrieving, and removing <c>IProxy</c> instances</item>
-    ///     </list>
-    ///     <para>
-    ///         Your application must register <c>IProxy</c> instances
-    ///         with the <c>Model</c>. Typically, you use an 
-    ///         <c>ICommand</c> to create and register <c>IProxy</c> 
-    ///         instances once the <c>Facade</c> has initialized the Core actors
-    ///     </para>
-    /// 
-    /// </remarks>
-	/// <seealso cref="PureMVC.Patterns.Proxy"/>
-	/// <seealso cref="PureMVC.Interfaces.IProxy" />
     public class Model : IModel
     {
 		#region Constructors
@@ -49,11 +32,10 @@ namespace PureMVC.Core
 		}
 
 		#endregion
-
+		///Model层的公共方法
 		#region Public Methods
-
+		
 		#region IModel Members
-
 		/// <summary>
 		/// 在Model的字典中注册该proxy
 		/// </summary>

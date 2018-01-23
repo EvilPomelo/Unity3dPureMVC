@@ -33,8 +33,8 @@ namespace PureMVC.Interfaces
     ///     <para>A concrete IMediator implementor usually looks something like this:</para>
     ///     <example>
     ///         <code>
-	///	using PureMVC.Patterns.~~;
-	///	using PureMVC.Core.View.~~;
+    ///	using PureMVC.Patterns.~~;
+    ///	using PureMVC.Core.View.~~;
     /// 
     ///	using com.me.myapp.model.~~;
     ///	using com.me.myapp.view.~~;
@@ -83,39 +83,31 @@ namespace PureMVC.Interfaces
     ///         </code>
     ///     </example>
     /// </remarks>
-	/// <see cref="PureMVC.Interfaces.INotification"/>
+    /// <see cref="PureMVC.Interfaces.INotification"/>
     public interface IMediator
-	{
-		/// <summary>
-        /// Tthe <c>IMediator</c> instance name
-        /// </summary>
-		string MediatorName { get; }
+    {
+        //中介者名
+        string MediatorName { get; }
 		
-        /// <summary>
-        /// The <c>IMediator</c>'s view component
-        /// </summary>
-		object ViewComponent { get; set; }
+        //持有的视图组件的引用
+        object ViewComponent { get; set; }
 
-		/// <summary>
-        /// List <c>INotification interests</c>
+        /// <summary>
+        /// 关注的方法名集合，只有这几个方法名他才会去执行方法
         /// </summary>
-        /// <returns>An <c>IList</c> of the <c>INotification</c> names this <c>IMediator</c> has an interest in</returns>
+        /// <returns></returns>
         IList<string> ListNotificationInterests();
 		
         /// <summary>
-        /// Handle an <c>INotification</c>
+        /// 调用该notification
         /// </summary>
-        /// <param name="notification">The <c>INotification</c> to be handled</param>
-		void HandleNotification(INotification notification);
+        /// <param name="notification"></param>
+        void HandleNotification(INotification notification);
 		
-		/// <summary>
-		/// Called by the View when the Mediator is registered
-		/// </summary>
-		void OnRegister();
+        //该中介者注册时调用
+        void OnRegister();
 
-		/// <summary>
-		/// Called by the View when the Mediator is removed
-		/// </summary>
-		void OnRemove();
-	}
+        //该中介者移除时调用
+        void OnRemove();
+    }
 }

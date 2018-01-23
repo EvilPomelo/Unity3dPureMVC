@@ -15,38 +15,28 @@ using System;
 /// </summary>
 namespace PureMVC.Interfaces
 {
-    /// <summary>
-    /// The interface definition for a PureMVC Notification
-    /// </summary>
-    /// <remarks>
-    ///     <para>PureMVC does not rely upon underlying event models</para>
-    ///     <para>The Observer Pattern as implemented within PureMVC exists to support event-driven communication between the application and the actors of the MVC triad</para>
-    ///     <para>Notifications are not meant to be a replacement for Events. Generally, <c>IMediator</c> implementors place event handlers on their view components, which they then handle in the usual way. This may lead to the broadcast of <c>Notification</c>s to trigger <c>ICommand</c>s or to communicate with other <c>IMediators</c>. <c>IProxy</c> and <c>ICommand</c> instances communicate with each other and <c>IMediator</c>s by broadcasting <c>INotification</c>s</para>
-    /// </remarks>
-	/// <see cref="PureMVC.Interfaces.IView"/>
-	/// <see cref="PureMVC.Interfaces.IObserver"/>
+
     public interface INotification
     {
         /// <summary>
-        /// The name of the <c>INotification</c> instance
+        /// 消息名
         /// </summary>
-        /// <remarks>No setter, should be set by constructor only</remarks>
-		string Name { get; }
+        string Name { get; }
 
         /// <summary>
-        /// The body of the <c>INotification</c> instance
+        /// 消息体
         /// </summary>
-		object Body { get; set; }
+        object Body { get; set; }
 		
         /// <summary>
-        /// The type of the <c>INotification</c> instance
+        /// 消息类型
         /// </summary>
-		string Type { get; set; }
+        string Type { get; set; }
 
         /// <summary>
-        /// Get the string representation of the <c>INotification</c> instance
+        /// 要求子类重写tostring方法
         /// </summary>
-        /// <returns>The string representation of the <c>INotification</c> instance</returns>
+        /// <returns></returns>
         string ToString();
     }
 }
