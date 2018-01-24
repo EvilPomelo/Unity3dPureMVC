@@ -15,131 +15,122 @@ using PureMVC.Interfaces;
 namespace PureMVC.Patterns
 {
     /// <summary>
-    /// A base <c>INotification</c> implementation
+    /// 该类的功能主要是定义一个消息对象里面存放的内容
+    /// 三个成员变量对应三个属性(消息名,消息体，消息类型）
+    /// 三个构造函数
+    /// 一个ToString方法
     /// </summary>
-    /// <remarks>
-    ///     <para>PureMVC does not rely upon underlying event models</para>
-    ///     <para>The Observer Pattern as implemented within PureMVC exists to support event-driven communication between the application and the actors of the MVC triad</para>
-    ///     <para>Notifications are not meant to be a replacement for Events. Generally, <c>IMediator</c> implementors place event handlers on their view components, which they then handle in the usual way. This may lead to the broadcast of <c>Notification</c>s to trigger <c>ICommand</c>s or to communicate with other <c>IMediators</c>. <c>IProxy</c> and <c>ICommand</c> instances communicate with each other and <c>IMediator</c>s by broadcasting <c>INotification</c>s</para>
-    /// </remarks>
-	/// <see cref="PureMVC.Patterns.Observer"/>
     public class Notification : INotification
-	{
+    {
         #region Constructors(三个构造方法，分别是只赋值方法名，赋值方法名与传递对象，赋值方法名，传递对象与方法类型)
 
         /// <summary>
-        /// Constructs a new notification with the specified name, default body and type
+        /// 只指定名字的构造函数
         /// </summary>
-        /// <param name="name">The name of the <c>Notification</c> instance</param>
+        /// <param name="name"></param>
         public Notification(string name)
             : this(name, null, null)
-		{ }
+        { }
 
         /// <summary>
-        /// Constructs a new notification with the specified name and body, with the default type
+        /// 指定名字和消息体的构造函数
         /// </summary>
-        /// <param name="name">The name of the <c>Notification</c> instance</param>
-        /// <param name="body">The <c>Notification</c>s body</param>
+        /// <param name="name"></param>
+        /// <param name="body"></param>
         public Notification(string name, object body)
             : this(name, body, null)
-		{ }
+        { }
 
         /// <summary>
-        /// Constructs a new notification with the specified name, body and type
+        /// 指定名字，消息体，消息类型的构造函数
         /// </summary>
-        /// <param name="name">The name of the <c>Notification</c> instance</param>
-        /// <param name="body">The <c>Notification</c>s body</param>
-        /// <param name="type">The type of the <c>Notification</c></param>
+        /// <param name="name"></param>
+        /// <param name="body"></param>
+        /// <param name="type"></param>
         public Notification(string name, object body, string type)
-		{
-			m_name = name;
-			m_body = body;
-			m_type = type;
-		}
+        {
+            m_name = name;
+            m_body = body;
+            m_type = type;
+        }
 
         #endregion
 
         #region Public Methods(重写的TosSring方法）
 
         /// <summary>
-        /// Get the string representation of the <c>Notification instance</c>
+        /// 重写ToString方法
         /// </summary>
-        /// <returns>The string representation of the <c>Notification</c> instance</returns>
+        /// <returns></returns>
         public override string ToString()
-		{
-			string msg = "Notification Name: " + Name;
-			msg += "\nBody:" + ((Body == null) ? "null" : Body.ToString());
-			msg += "\nType:" + ((Type == null) ? "null" : Type);
-			return msg;
-		}
+        {
+            string msg = "Notification Name: " + Name;
+            msg += "\nBody:" + ((Body == null) ? "null" : Body.ToString());
+            msg += "\nType:" + ((Type == null) ? "null" : Type);
+            return msg;
+        }
 
         #endregion
 
         #region Accessors(从父类重写的虚属性)
 
         /// <summary>
-        /// The name of the <c>Notification</c> instance
+        /// 消息名属性
         /// </summary>
         public virtual string Name
-		{
-			get { return m_name; }
-		}
+        {
+            get { return m_name; }
+        }
 		
         /// <summary>
-        /// The body of the <c>Notification</c> instance
+        /// 消息体属性
         /// </summary>
-		/// <remarks>This accessor is thread safe</remarks>
-		public virtual object Body
-		{
-			get
-			{
-				// Setting and getting of reference types is atomic, no need to lock here
-				return m_body;
-			}
-			set
-			{
-				// Setting and getting of reference types is atomic, no need to lock here
-				m_body = value;
-			}
-		}
-		
-		/// <summary>
-		/// The type of the <c>Notification</c> instance
-		/// </summary>
-		/// <remarks>This accessor is thread safe</remarks>
-		public virtual string Type
+        public virtual object Body
         {
-			get
-			{
-				// Setting and getting of reference types is atomic, no need to lock here
-				return m_type;
-			}
-			set
-			{
-				// Setting and getting of reference types is atomic, no need to lock here
-				m_type = value;
-			}
-		}
+            get
+            {
+                return m_body;
+            }
+            set
+            {
+                m_body = value;
+            }
+        }
+		
+        /// <summary>
+        /// 消息类型属性
+        /// </summary>
+        public virtual string Type
+        {
+            get
+            {
+                return m_type;
+            }
+            set
+            {
+                m_type = value;
+            }
+        }
 
         #endregion
 
         #region Members(与属性关联的私有成员)
 
         /// <summary>
-        /// The name of the notification instance 
+        /// 消息实例的名字
         /// </summary>
         private string m_name;
 
         /// <summary>
-        /// The type of the notification instance
+        /// 消息类型
         /// </summary>
-		private string m_type;
+        private string m_type;
 
         /// <summary>
-        /// The body of the notification instance
+        /// 消息体
         /// </summary>
-		private object m_body;
+        private object m_body;
 
-		#endregion
-	}
+        #endregion
+    }
 }

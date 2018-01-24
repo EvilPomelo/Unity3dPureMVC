@@ -16,28 +16,17 @@ using PureMVC.Patterns;
 
 namespace PureMVC.Patterns
 {
-    /// <summary>
-    /// A base <c>ICommand</c> implementation
-    /// </summary>
-    /// <remarks>
-    ///     <para>Your subclass should override the <c>execute</c> method where your business logic will handle the <c>INotification</c></para>
-    /// </remarks>
-	/// <see cref="PureMVC.Core.Controller"/>
-	/// <see cref="PureMVC.Patterns.Notification"/>
-	/// <see cref="PureMVC.Patterns.MacroCommand"/>
-    public class SimpleCommand : Notifier, ICommand, INotifier
+	
+    public class SimpleCommand : Notifier, ICommand
     {
 		#region Public Methods
 
 		#region ICommand Members
 
 		/// <summary>
-        /// Fulfill the use-case initiated by the given <c>INotification</c>
-        /// </summary>
-        /// <param name="notification">The <c>INotification</c> to handle</param>
-        /// <remarks>
-        ///     <para>In the Command Pattern, an application use-case typically begins with some user action, which results in an <c>INotification</c> being broadcast, which is handled by business logic in the <c>execute</c> method of an <c>ICommand</c></para>
-        /// </remarks>
+		/// 执行方法
+		/// </summary>
+		/// <param name="notification"></param>
 		public virtual void Execute(INotification notification)
 		{
 		}

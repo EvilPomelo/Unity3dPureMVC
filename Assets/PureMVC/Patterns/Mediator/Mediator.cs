@@ -18,6 +18,8 @@ namespace PureMVC.Patterns
 {
     /// <summary>
     /// 两个成员变量对应两个属性，一个成员常量
+    /// 三个构造函数，初始化成员变量视图名字和组件
+    /// 四个继承的公共方法
     /// </summary>
     public class Mediator : Notifier, IMediator
     {
@@ -47,10 +49,10 @@ namespace PureMVC.Patterns
         }
 
         /// <summary>
-        /// Constructs a new mediator with the specified name and view component
+        /// 构造函数
         /// </summary>
-        /// <param name="mediatorName">The name of the mediator</param>
-        /// <param name="viewComponent">The view component to be mediated</param>
+        /// <param name="mediatorName"></param>
+        /// <param name="viewComponent"></param>
         public Mediator(string mediatorName, object viewComponent)
         {
             m_mediatorName = (mediatorName != null) ? mediatorName : NAME;
@@ -64,36 +66,31 @@ namespace PureMVC.Patterns
         #region IMediator Members
 
         /// <summary>
-        /// List the <c>INotification</c> names this <c>Mediator</c> is interested in being notified of
+        /// 感兴趣的消息名列表
         /// </summary>
-        /// <returns>The list of <c>INotification</c> names </returns>
+        /// <returns></returns>
         public virtual IList<string> ListNotificationInterests()
         {
             return new List<string>();
         }
 
         /// <summary>
-        /// Handle <c>INotification</c>s
+        /// 获得消息名的句柄
         /// </summary>
-        /// <param name="notification">The <c>INotification</c> instance to handle</param>
-        /// <remarks>
-        ///     <para>
-        ///        Typically this will be handled in a switch statement, with one 'case' entry per <c>INotification</c> the <c>Mediator</c> is interested in. 
-        ///     </para>
-        /// </remarks>
+        /// <param name="notification"></param>
         public virtual void HandleNotification(INotification notification)
         {
         }
 
         /// <summary>
-        /// Called by the View when the Mediator is registered
+        /// 注册时调用
         /// </summary>
         public virtual void OnRegister()
         {
         }
 
         /// <summary>
-        /// Called by the View when the Mediator is removed
+        /// 移除时调用
         /// </summary>
         public virtual void OnRemove()
         {

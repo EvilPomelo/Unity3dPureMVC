@@ -16,7 +16,10 @@ using PureMVC.Interfaces;
 namespace PureMVC.Core
 {
     /// <summary>
-    /// IModel的单例实现
+    /// 四个成员变量，两个对象锁，一个Proxy的字典，一个model单例
+    /// 一个属性，提供外部范文Model单例的接口
+    /// 一个构造函数初始化Proxy字典并调用初始化方法，一个静态构造函数
+    /// 一个单例属性
     /// </summary>
     public class Model : IModel
     {
@@ -32,8 +35,8 @@ namespace PureMVC.Core
 		}
 
 		#endregion
-		///Model层的公共方法
-		#region Public Methods
+
+		#region Public Methods(四个proxy的操作方法)
 		
 		#region IModel Members
 		/// <summary>

@@ -16,136 +16,25 @@ using PureMVC.Patterns;
 
 namespace PureMVC.Patterns
 {
-    /// <summary>
-    /// A base Singleton <c>IFacade</c> implementation
-    /// </summary>
-    /// <remarks>
-    ///     <para>In PureMVC, the <c>Facade</c> class assumes these responsibilities:</para>
-    ///     <list type="bullet">
-    ///         <item>Initializing the <c>Model</c>, <c>View</c> and <c>Controller</c> Singletons</item>
-    ///         <item>Providing all the methods defined by the <c>IModel, IView, &amp; IController</c> interfaces</item>
-    ///         <item>Providing the ability to override the specific <c>Model</c>, <c>View</c> and <c>Controller</c> Singletons created</item>
-    ///         <item>Providing a single point of contact to the application for registering <c>Commands</c> and notifying <c>Observers</c></item>
-    ///     </list>
-    ///     <example>
-    ///         <code>
-    ///	using PureMVC.Patterns;
-    /// 
-    ///	using com.me.myapp.model;
-    ///	using com.me.myapp.view;
-    ///	using com.me.myapp.controller;
-    /// 
-    ///	public class MyFacade : Facade
-    ///	{
-    ///		// Notification constants. The Facade is the ideal
-    ///		// location for these constants, since any part
-    ///		// of the application participating in PureMVC 
-    ///		// Observer Notification will know the Facade.
-    ///		public static const string GO_COMMAND = "go";
-    /// 
-    ///     // we aren't allowed to initialize new instances from outside this class
-    ///     protected MyFacade() {}
-    /// 
-    ///     // we must specify the type of instance
-    ///     static MyFacade()
-    ///     {
-    ///         instance = new MyFacade();
-    ///     }
-    /// 
-    ///		// Override Singleton Factory method 
-    ///		public new static MyFacade getInstance() {
-    ///			return instance as MyFacade;
-    ///		}
-    /// 		
-    ///		// optional initialization hook for Facade
-    ///		public override void initializeFacade() {
-    ///			base.initializeFacade();
-    ///			// do any special subclass initialization here
-    ///		}
-    ///	
-    ///		// optional initialization hook for Controller
-    ///		public override void initializeController() {
-    ///			// call base to use the PureMVC Controller Singleton. 
-    ///			base.initializeController();
-    /// 
-    ///			// Otherwise, if you're implmenting your own
-    ///			// IController, then instead do:
-    ///			// if ( controller != null ) return;
-    ///			// controller = MyAppController.getInstance();
-    /// 		
-    ///			// do any special subclass initialization here
-    ///			// such as registering Commands
-    ///			registerCommand( GO_COMMAND, com.me.myapp.controller.GoCommand )
-    ///		}
-    ///	
-    ///		// optional initialization hook for Model
-    ///		public override void initializeModel() {
-    ///			// call base to use the PureMVC Model Singleton. 
-    ///			base.initializeModel();
-    /// 
-    ///			// Otherwise, if you're implmenting your own
-    ///			// IModel, then instead do:
-    ///			// if ( model != null ) return;
-    ///			// model = MyAppModel.getInstance();
-    /// 		
-    ///			// do any special subclass initialization here
-    ///			// such as creating and registering Model proxys
-    ///			// that don't require a facade reference at
-    ///			// construction time, such as fixed type lists
-    ///			// that never need to send Notifications.
-    ///			regsiterProxy( new USStateNamesProxy() );
-    /// 			
-    ///			// CAREFUL: Can't reference Facade instance in constructor 
-    ///			// of new Proxys from here, since this step is part of
-    ///			// Facade construction!  Usually, Proxys needing to send 
-    ///			// notifications are registered elsewhere in the app 
-    ///			// for this reason.
-    ///		}
-    ///	
-    ///		// optional initialization hook for View
-    ///		public override void initializeView() {
-    ///			// call base to use the PureMVC View Singleton. 
-    ///			base.initializeView();
-    /// 
-    ///			// Otherwise, if you're implmenting your own
-    ///			// IView, then instead do:
-    ///			// if ( view != null ) return;
-    ///			// view = MyAppView.Instance;
-    /// 		
-    ///			// do any special subclass initialization here
-    ///			// such as creating and registering Mediators
-    ///			// that do not need a Facade reference at construction
-    ///			// time.
-    ///			registerMediator( new LoginMediator() ); 
-    /// 
-    ///			// CAREFUL: Can't reference Facade instance in constructor 
-    ///			// of new Mediators from here, since this is a step
-    ///			// in Facade construction! Usually, all Mediators need 
-    ///			// receive notifications, and are registered elsewhere in 
-    ///			// the app for this reason.
-    ///		}
-    ///	}
-    ///         </code>
-    ///     </example>
-    /// </remarks>
-	/// <see cref="PureMVC.Core.Model"/>
-	/// <see cref="PureMVC.Core.View"/>
-	/// <see cref="PureMVC.Core.Controller"/>
-	/// <see cref="PureMVC.Patterns.Notification"/>
-	/// <see cref="PureMVC.Patterns.Mediator"/>
-	/// <see cref="PureMVC.Patterns.Proxy"/>
-	/// <see cref="PureMVC.Patterns.SimpleCommand"/>
-	/// <see cref="PureMVC.Patterns.MacroCommand"/>
+ 
+	/// <summary>
+	/// 该类将Controller，Model，View三个类通过外观模式联系起来
+	/// 5个成员变量，除开controller，model，view三个单例对象的引用，还有facade对象的单例引用，以及一个对象锁
+	/// 一个属性，赋予Facade单例类的访问权限
+	/// 四个个初始化方法，在InitializeFacade中调用model，controller，view的初始化方法
+	/// 一个普通无参构造函数调用InitializeFacade，一个静态构造函数
+	/// 三个不同参数的SendNotification函数，通过传入不同参数调用一个通用的消息发送函数NotifyObservers
+	/// 四个Mediator操作方法，分别为注册，删除，检索，判断是否存在
+	/// 四个Command操作方法，分别为注册，删除，检索，判断是否存在
+	/// 四个Proxy操作方法，分别为注册，删除，检索，判断是否存在
+	/// </summary>
     public class Facade : IFacade
 	{
 		#region Constructors
 
 		/// <summary>
-        /// Constructor that initializes the Facade
-        /// </summary>
-        /// <remarks>
-        ///     <para>This <c>IFacade</c> implementation is a Singleton, so you should not call the constructor directly, but instead call the static Singleton Factory method <c>Facade.Instance</c></para>
-        /// </remarks>
+		/// 构造函数中调用初始化函数
+		/// </summary>
         protected Facade() 
         {
 			InitializeFacade();
@@ -160,48 +49,35 @@ namespace PureMVC.Patterns
 		#region Proxy
 
 		/// <summary>
-		/// Register an <c>IProxy</c> with the <c>Model</c> by name
+		/// 注册一个代理类
 		/// </summary>
-		/// <param name="proxy">The <c>IProxy</c> to be registered with the <c>Model</c></param>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="proxy"></param>
 		public virtual void RegisterProxy(IProxy proxy)
 		{
-			// The model is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the model.
 			m_model.RegisterProxy(proxy);
 		}
 
 		/// <summary>
-		/// Retrieve a <c>IProxy</c> from the <c>Model</c> by name
+		/// 检索一个代理类
 		/// </summary>
-		/// <param name="proxyName">The name of the <c>IProxy</c> instance to be retrieved</param>
-		/// <returns>The <c>IProxy</c> previously regisetered by <c>proxyName</c> with the <c>Model</c></returns>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="proxyName"></param>
+		/// <returns></returns>
         public virtual IProxy RetrieveProxy(string proxyName)
 		{
-			// The model is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the model.
 			return m_model.RetrieveProxy(proxyName);
 		}
 
-		/// <summary>
-		/// Remove an <c>IProxy</c> instance from the <c>Model</c> by name
-		/// </summary>
-		/// <param name="proxyName">The <c>IProxy</c> to remove from the <c>Model</c></param>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		//
         public virtual IProxy RemoveProxy(string proxyName)
 		{
-			// The model is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the model.
 			return m_model.RemoveProxy(proxyName);
 		}
 
 		/// <summary>
-		/// Check if a Proxy is registered
+		/// 检查该模型是否注册
 		/// </summary>
-		/// <param name="proxyName">The name of the <c>IProxy</c> instance to check for</param>
-		/// <returns>whether a Proxy is currently registered with the given <c>proxyName</c>.</returns>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="proxyName"></param>
+		/// <returns></returns>
         public virtual bool HasProxy(string proxyName)
 		{
 			// The model is initialized in the constructor of the singleton, so this call should be thread safe.
@@ -214,40 +90,31 @@ namespace PureMVC.Patterns
 		#region Command
 
 		/// <summary>
-		/// Register an <c>ICommand</c> with the <c>Controller</c>
+		/// 注册命令
 		/// </summary>
-		/// <param name="notificationName">The name of the <c>INotification</c> to associate the <c>ICommand</c> with.</param>
-		/// <param name="commandType">A reference to the <c>Type</c> of the <c>ICommand</c></param>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="notificationName"></param>
+		/// <param name="commandType"></param>
         public virtual void RegisterCommand(string notificationName, Type commandType)
 		{
-			// The controller is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the controller.
 			m_controller.RegisterCommand(notificationName, commandType);
 		}
 
 		/// <summary>
-		/// Remove a previously registered <c>ICommand</c> to <c>INotification</c> mapping from the Controller.
+		/// 移除注册
 		/// </summary>
-		/// <param name="notificationName">TRemove a previously registered <c>ICommand</c> to <c>INotification</c> mapping from the Controller.</param>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="notificationName"></param>
         public virtual void RemoveCommand(string notificationName)
 		{
-			// The controller is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the controller.
 			m_controller.RemoveCommand(notificationName);
 		}
 
 		/// <summary>
-		/// Check if a Command is registered for a given Notification 
+		/// 检查命令是否注册
 		/// </summary>
-		/// <param name="notificationName">The name of the <c>INotification</c> to check for.</param>
-		/// <returns>whether a Command is currently registered for the given <c>notificationName</c>.</returns>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="notificationName"></param>
+		/// <returns></returns>
         public virtual bool HasCommand(string notificationName)
 		{
-			// The controller is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the controller.
 			return m_controller.HasCommand(notificationName);
 		}
 
@@ -256,52 +123,41 @@ namespace PureMVC.Patterns
 		#region Mediator
 
 		/// <summary>
-		/// Register an <c>IMediator</c> instance with the <c>View</c>
+		/// 在View中注册一个Mediator类
 		/// </summary>
-		/// <param name="mediator">A reference to the <c>IMediator</c> instance</param>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="mediator"></param>
         public virtual void RegisterMediator(IMediator mediator)
 		{
-			// The view is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the view.
 			m_view.RegisterMediator(mediator);
 		}
 
 		/// <summary>
-		/// Retrieve an <c>IMediator</c> instance from the <c>View</c>
+		/// 通过mediator名字检索这个该mediator在view中是否注册
 		/// </summary>
-		/// <param name="mediatorName">The name of the <c>IMediator</c> instance to retrieve</param>
-		/// <returns>The <c>IMediator</c> previously registered with the given <c>mediatorName</c></returns>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="mediatorName"></param>
+		/// <returns></returns>
         public virtual IMediator RetrieveMediator(string mediatorName)
 		{
-			// The view is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the view.
 			return m_view.RetrieveMediator(mediatorName);
 		}
 
 		/// <summary>
-		/// Remove a <c>IMediator</c> instance from the <c>View</c>
+		/// 在View中移除该Mediator
 		/// </summary>
-		/// <param name="mediatorName">The name of the <c>IMediator</c> instance to be removed</param>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="mediatorName"></param>
+		/// <returns></returns>
         public virtual IMediator RemoveMediator(string mediatorName)
 		{
-			// The view is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the view.
 			return m_view.RemoveMediator(mediatorName);
 		}
 
 		/// <summary>
-		/// Check if a Mediator is registered or not
+		/// 判断该mediator名字是否注册
 		/// </summary>
-		/// <param name="mediatorName">The name of the <c>IMediator</c> instance to check for</param>
-		/// <returns>whether a Mediator is registered with the given <code>mediatorName</code>.</returns>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="mediatorName"></param>
+		/// <returns></returns>
         public virtual bool HasMediator(string mediatorName)
 		{
-			// The view is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the view.
 			return m_view.HasMediator(mediatorName);
 		}
 
@@ -310,16 +166,11 @@ namespace PureMVC.Patterns
 		#region Observer
 
 		/// <summary>
-		/// Notify <c>Observer</c>s of an <c>INotification</c>
+		/// 视图对象发送消息给观察的对象
 		/// </summary>
-		/// <remarks>This method is left public mostly for backward compatibility, and to allow you to send custom notification classes using the facade.</remarks>
-		/// <remarks>Usually you should just call sendNotification and pass the parameters, never having to construct the notification yourself.</remarks>
-		/// <param name="notification">The <c>INotification</c> to have the <c>View</c> notify observers of</param>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="notification"></param>
         public virtual void NotifyObservers(INotification notification)
 		{
-			// The view is initialized in the constructor of the singleton, so this call should be thread safe.
-			// This method is thread safe on the view.
 			m_view.NotifyObservers(notification);
 		}
 
@@ -327,39 +178,33 @@ namespace PureMVC.Patterns
 
 		#endregion
 
-		#region INotifier Members
+		#region INotifier Members（三个发送消息函数）
 
 		/// <summary>
-		/// Send an <c>INotification</c>
+		/// 发送消息，参数包含消息名
 		/// </summary>
-		/// <param name="notificationName">The name of the notiification to send</param>
-		/// <remarks>Keeps us from having to construct new notification instances in our implementation code</remarks>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="notificationName"></param>
         public virtual void SendNotification(string notificationName)
 		{
 			NotifyObservers(new Notification(notificationName));
 		}
 
 		/// <summary>
-		/// Send an <c>INotification</c>
+		/// 发送消息，参数包含消息名，消息体
 		/// </summary>
-		/// <param name="notificationName">The name of the notification to send</param>
-		/// <param name="body">The body of the notification</param>
-		/// <remarks>Keeps us from having to construct new notification instances in our implementation code</remarks>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="notificationName"></param>
+		/// <param name="body"></param>
         public virtual void SendNotification(string notificationName, object body)
 		{
 			NotifyObservers(new Notification(notificationName, body));
 		}
 
 		/// <summary>
-		/// Send an <c>INotification</c>
+		/// 发送消息，参数包含消息名，消息体，消息类型
 		/// </summary>
-		/// <param name="notificationName">The name of the notification to send</param>
-		/// <param name="body">The body of the notification</param>
-		/// <param name="type">The type of the notification</param>
-		/// <remarks>Keeps us from having to construct new notification instances in our implementation code</remarks>
-		/// <remarks>This method is thread safe and needs to be thread safe in all implementations.</remarks>
+		/// <param name="notificationName"></param>
+		/// <param name="body"></param>
+		/// <param name="type"></param>
         public virtual void SendNotification(string notificationName, object body, string type)
 		{
 			NotifyObservers(new Notification(notificationName, body, type));
@@ -372,7 +217,7 @@ namespace PureMVC.Patterns
 		#region Accessors
 
 		/// <summary>
-		/// Facade Singleton Factory method.  This method is thread safe.
+		/// Facade单例属性
 		/// </summary>
 		public static IFacade Instance
 		{
@@ -395,19 +240,15 @@ namespace PureMVC.Patterns
 		#region Protected & Internal Methods
 
 		/// <summary>
-        /// Explicit static constructor to tell C# compiler 
-        /// not to mark type as beforefieldinit
-        ///</summary>
+		/// Facade静态构造函数
+		/// </summary>
         static Facade()
         {
         }
 
-        /// <summary>
-        /// Initialize the Singleton <c>Facade</c> instance
-        /// </summary>
-        /// <remarks>
-        /// <para>Called automatically by the constructor. Override in your subclass to do any subclass specific initializations. Be sure to call <c>base.initializeFacade()</c>, though</para>
-        /// </remarks>
+   		/// <summary>
+   		/// 初始化Facade对象
+   		/// </summary>
         protected virtual void InitializeFacade()
         {
 			InitializeModel();
@@ -416,16 +257,8 @@ namespace PureMVC.Patterns
 		}
 
         /// <summary>
-        /// Initialize the <c>Controller</c>
+        /// 用于初始化实例
         /// </summary>
-        /// <remarks>
-        ///     <para>Called by the <c>initializeFacade</c> method. Override this method in your subclass of <c>Facade</c> if one or both of the following are true:</para>
-        ///     <list type="bullet">
-        ///         <item>You wish to initialize a different <c>IController</c></item>
-        ///         <item>You have <c>Commands</c> to register with the <c>Controller</c> at startup</item>
-        ///     </list>
-        ///     <para>If you don't want to initialize a different <c>IController</c>, call <c>base.initializeController()</c> at the beginning of your method, then register <c>Command</c>s</para>
-        /// </remarks>
 		protected virtual void InitializeController()
         {
 			if (m_controller != null) return;
@@ -433,35 +266,17 @@ namespace PureMVC.Patterns
 		}
 
         /// <summary>
-        /// Initialize the <c>Model</c>
+        /// 初始化Model实例
         /// </summary>
-        /// <remarks>
-        ///     <para>Called by the <c>initializeFacade</c> method. Override this method in your subclass of <c>Facade</c> if one or both of the following are true:</para>
-        ///     <list type="bullet">
-        ///         <item>You wish to initialize a different <c>IModel</c></item>
-        ///         <item>You have <c>Proxy</c>s to register with the Model that do not retrieve a reference to the Facade at construction time</item>
-        ///     </list>
-        ///     <para>If you don't want to initialize a different <c>IModel</c>, call <c>base.initializeModel()</c> at the beginning of your method, then register <c>Proxy</c>s</para>
-        ///     <para>Note: This method is <i>rarely</i> overridden; in practice you are more likely to use a <c>Command</c> to create and register <c>Proxy</c>s with the <c>Model</c>, since <c>Proxy</c>s with mutable data will likely need to send <c>INotification</c>s and thus will likely want to fetch a reference to the <c>Facade</c> during their construction</para>
-        /// </remarks>
         protected virtual void InitializeModel()
         {
 			if (m_model != null) return;
 			m_model = Model.Instance;
 		}
 		
-        /// <summary>
-        /// Initialize the <c>View</c>
-        /// </summary>
-        /// <remarks>
-        ///     <para>Called by the <c>initializeFacade</c> method. Override this method in your subclass of <c>Facade</c> if one or both of the following are true:</para>
-        ///     <list type="bullet">
-        ///         <item>You wish to initialize a different <c>IView</c></item>
-        ///         <item>You have <c>Observers</c> to register with the <c>View</c></item>
-        ///     </list>
-        ///     <para>If you don't want to initialize a different <c>IView</c>, call <c>base.initializeView()</c> at the beginning of your method, then register <c>IMediator</c> instances</para>
-        ///     <para>Note: This method is <i>rarely</i> overridden; in practice you are more likely to use a <c>Command</c> to create and register <c>Mediator</c>s with the <c>View</c>, since <c>IMediator</c> instances will need to send <c>INotification</c>s and thus will likely want to fetch a reference to the <c>Facade</c> during their construction</para>
-        /// </remarks>
+       /// <summary>
+       /// 用于初始化View实例
+       /// </summary>
         protected virtual void InitializeView()
         {
 			if (m_view != null) return;
@@ -472,29 +287,19 @@ namespace PureMVC.Patterns
 
 		#region Members
 
-		/// <summary>
-        /// Private reference to the Controller
-        /// </summary>
+        //Controller类成员变量
 		protected IController m_controller;
 
-        /// <summary>
-        /// Private reference to the Model
-        /// </summary>
+        //Model类成员变量
         protected IModel m_model;
 
-        /// <summary>
-        /// Private reference to the View
-        /// </summary>
+        // View类成员变量
         protected IView m_view;
 
-        /// <summary>
-        /// The Singleton Facade Instance
-        /// </summary>
+        // Facade(本类静态成员变量)
         protected static volatile IFacade m_instance;
 
-		/// <summary>
-		/// Used for locking the instance calls
-		/// </summary>
+		// 对象锁
 		protected static readonly object m_staticSyncRoot = new object();
 
 		#endregion

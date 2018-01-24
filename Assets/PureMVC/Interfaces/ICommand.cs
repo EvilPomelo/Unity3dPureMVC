@@ -11,16 +11,12 @@ using System;
 
 namespace PureMVC.Interfaces
 {
-    /// <summary>
-    /// The interface definition for a PureMVC Command
-    /// </summary>
-	/// <see cref="PureMVC.Interfaces.INotification"/>
+
     public interface ICommand
     {
         /// <summary>
-        /// Execute the <c>ICommand</c>'s logic to handle a given <c>INotification</c>
+        /// 根据传入消息体执行方法
         /// </summary>
-        /// <param name="notification">An <c>INotification</c> to handle</param>
 		void Execute(INotification notification);
     }
 }

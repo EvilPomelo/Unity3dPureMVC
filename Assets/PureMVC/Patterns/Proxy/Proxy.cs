@@ -16,21 +16,13 @@ using PureMVC.Patterns;
 namespace PureMVC.Patterns
 {
     /// <summary>
-    /// A base <c>IProxy</c> implementation
+    /// 
     /// </summary>
-    /// <remarks>
-    /// 	<para>In PureMVC, <c>Proxy</c> classes are used to manage parts of the application's data model</para>
-    /// 	<para>A <c>Proxy</c> might simply manage a reference to a local data object, in which case interacting with it might involve setting and getting of its data in synchronous fashion</para>
-    /// 	<para><c>Proxy</c> classes are also used to encapsulate the application's interaction with remote services to save or retrieve data, in which case, we adopt an asyncronous idiom; setting data (or calling a method) on the <c>Proxy</c> and listening for a <c>Notification</c> to be sent when the <c>Proxy</c> has retrieved the data from the service</para>
-    /// </remarks>
-	/// <see cref="PureMVC.Core.Model"/>
-    public class Proxy : Notifier, IProxy, INotifier
+    public class Proxy : Notifier, IProxy
     {
 		#region Constants
 
-		/// <summary>
-        /// The default proxy name
-        /// </summary>
+		//Proxy对象默认名字
         public static string NAME = "Proxy";
 
 		#endregion
@@ -38,27 +30,27 @@ namespace PureMVC.Patterns
 		#region Constructors
 
 		/// <summary>
-        /// Constructs a new proxy with the default name and no data
-        /// </summary>
+		/// 构造函数，参数为空，使用默认参数
+		/// </summary>
         public Proxy() 
             : this(NAME, null)
         {
 		}
 
         /// <summary>
-        /// Constructs a new proxy with the specified name and no data
+        /// 构造函数中给代理类指定一个自定义名字
         /// </summary>
-        /// <param name="proxyName">The name of the proxy</param>
+        /// <param name="proxyName"></param>
         public Proxy(string proxyName)
             : this(proxyName, null)
         {
 		}
 
         /// <summary>
-        /// Constructs a new proxy with the specified name and data
+        /// 构造一个代理类，使用
         /// </summary>
-        /// <param name="proxyName">The name of the proxy</param>
-        /// <param name="data">The data to be managed</param>
+        /// <param name="proxyName"></param>
+        /// <param name="data"></param>
 		public Proxy(string proxyName, object data)
 		{
 
@@ -73,14 +65,14 @@ namespace PureMVC.Patterns
 		#region IProxy Members
 
 		/// <summary>
-		/// Called by the Model when the Proxy is registered
+		/// 代理类注册时调用
 		/// </summary>
 		public virtual void OnRegister()
 		{
 		}
 
 		/// <summary>
-		/// Called by the Model when the Proxy is removed
+		/// 代理类删除时调用
 		/// </summary>
 		public virtual void OnRemove()
 		{
@@ -93,7 +85,7 @@ namespace PureMVC.Patterns
 		#region Accessors
 
 		/// <summary>
-		/// Get the proxy name
+		/// 代理类名字，只读
 		/// </summary>
 		/// <returns></returns>
 		public virtual string ProxyName
@@ -102,7 +94,7 @@ namespace PureMVC.Patterns
 		}
 
 		/// <summary>
-		/// Set the data object
+		/// 代理类属性
 		/// </summary>
 		public virtual object Data
 		{
@@ -114,14 +106,10 @@ namespace PureMVC.Patterns
 
 		#region Members
 
-		/// <summary>
-        /// The name of the proxy
-        /// </summary>
+		//代理类的名字
 		protected string m_proxyName;
 		
-		/// <summary>
-		/// The data object to be managed
-		/// </summary>
+		//代理类管理的对象
 		protected object m_data;
 
 		#endregion
