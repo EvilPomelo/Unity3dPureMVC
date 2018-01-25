@@ -13,55 +13,81 @@
             </e>
           </e>
         </e>
-        <e p="PureMVC" t="Include">
-          <e p="Core" t="Include">
-            <e p="Controller.cs" t="Include" />
-            <e p="Model.cs" t="Include" />
-            <e p="View.cs" t="Include" />
-          </e>
-          <e p="Interfaces" t="Include">
-            <e p="ICommand.cs" t="Include" />
-            <e p="IController.cs" t="Include" />
-            <e p="IFacade.cs" t="Include" />
-            <e p="IMediator.cs" t="Include" />
-            <e p="IModel.cs" t="Include" />
-            <e p="INotification.cs" t="Include" />
-            <e p="INotifier.cs" t="Include" />
-            <e p="IObserver.cs" t="Include" />
-            <e p="IProxy.cs" t="Include" />
-            <e p="IView.cs" t="Include" />
-          </e>
-          <e p="Patterns" t="Include">
-            <e p="Command" t="Include">
-              <e p="MacroCommand.cs" t="Include" />
-              <e p="SimpleCommand.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Frameworks" t="Include">
+            <e p="PureMVC" t="Include">
+              <e p="Core" t="Include">
+                <e p="Controller.cs" t="Include" />
+                <e p="Model.cs" t="Include" />
+                <e p="View.cs" t="Include" />
+              </e>
+              <e p="Interfaces" t="Include">
+                <e p="ICommand.cs" t="Include" />
+                <e p="IController.cs" t="Include" />
+                <e p="IFacade.cs" t="Include" />
+                <e p="IMediator.cs" t="Include" />
+                <e p="IModel.cs" t="Include" />
+                <e p="INotification.cs" t="Include" />
+                <e p="INotifier.cs" t="Include" />
+                <e p="IObserver.cs" t="Include" />
+                <e p="IProxy.cs" t="Include" />
+                <e p="IView.cs" t="Include" />
+              </e>
+              <e p="Patterns" t="Include">
+                <e p="Command" t="Include">
+                  <e p="MacroCommand.cs" t="Include" />
+                  <e p="SimpleCommand.cs" t="Include" />
+                </e>
+                <e p="Facade" t="Include">
+                  <e p="Facade.cs" t="Include" />
+                </e>
+                <e p="Mediator" t="Include">
+                  <e p="Mediator.cs" t="Include" />
+                </e>
+                <e p="Observer" t="Include">
+                  <e p="Notification.cs" t="Include" />
+                  <e p="Notifier.cs" t="Include" />
+                  <e p="Observer.cs" t="Include" />
+                </e>
+                <e p="Proxy" t="Include">
+                  <e p="Proxy.cs" t="Include" />
+                </e>
+              </e>
+              <e p="XML注释详解.txt" t="Include" />
             </e>
-            <e p="Facade" t="Include">
-              <e p="Facade.cs" t="Include" />
-            </e>
-            <e p="Mediator" t="Include">
-              <e p="Mediator.cs" t="Include" />
-            </e>
-            <e p="Observer" t="Include">
-              <e p="Notification.cs" t="Include" />
-              <e p="Notifier.cs" t="Include" />
-              <e p="Observer.cs" t="Include" />
-            </e>
-            <e p="Proxy" t="Include">
-              <e p="Proxy.cs" t="Include" />
+            <e p="SUIFW" t="Include">
+              <e p="BaseUIForm.cs" t="Include" />
+              <e p="Config" t="Include">
+                <e p="ConfigManagerByJson.cs" t="Include" />
+                <e p="IConfigManager.cs" t="Include" />
+                <e p="SysDefine.cs" t="Include" />
+              </e>
+              <e p="EventAndMessage" t="Include">
+                <e p="EventTriggerListener.cs" t="Include" />
+                <e p="MessageCenter.cs" t="Include" />
+              </e>
+              <e p="Exception" t="Include">
+                <e p="JsonAnlysisException.cs" t="Include" />
+              </e>
+              <e p="Helps" t="Include">
+                <e p="ResourcesMgr.cs" t="Include" />
+                <e p="UIMaskMgr.cs" t="Include" />
+                <e p="UnityHelper.cs" t="Include" />
+              </e>
+              <e p="Localization" t="Include">
+                <e p="LauguageMgr.cs" t="Include" />
+              </e>
+              <e p="Log" t="Include">
+                <e p="Log.cs" t="Include" />
+              </e>
+              <e p="Test" t="Include">
+                <e p="test.cs" t="Include" />
+              </e>
+              <e p="UIManager.cs" t="Include" />
+              <e p="UIType.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="Test" t="Include">
-          <e p="ApplicationFacade.cs" t="Include" />
-          <e p="DataCommand.cs" t="Include" />
-          <e p="DataMediator.cs" t="Include" />
-          <e p="DataProxy.cs" t="Include" />
-          <e p="MyData.cs" t="Include" />
-          <e p="StartGame.cs" t="Include" />
-        </e>
-        <e p="test.cs" t="Include" />
-        <e p="XML注释详解.txt" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
