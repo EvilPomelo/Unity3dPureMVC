@@ -86,6 +86,9 @@
               <e p="UIManager.cs" t="Include" />
               <e p="UIType.cs" t="Include" />
             </e>
+            <e p="Test" t="Include">
+              <e p="TestClass1.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>
