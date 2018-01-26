@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4366099-17a2-472c-b415-dd20d66b7602" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Unity3dPureMVC/.idea/contentModel.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Unity3dPureMVC/.idea/indexLayout.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Unity3dPureMVC/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Unity3dPureMVC/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Unity3dPureMVC/riderModule.iml" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/New Scene.unity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Scene1.unity" afterPath="$PROJECT_DIR$/Assets/Scene/Scene1.unity" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/test.unity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/test.unity.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Commponents.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="BaseUIForm.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Frameworks/SUIFW/BaseUIForm.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1342">
+              <caret line="72" column="9" lean-forward="false" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+              <folding>
+                <marker date="1516929568780" expanded="true" signature="0:375" ph="/* Title: &quot;SUIFW&quot; UI框架项目 ... */" />
+                <marker date="1516929568780" expanded="false" signature="382:490" ph="..." />
+                <marker date="1516929568780" expanded="true" signature="507:4612" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="551:4610" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="688:783" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="794:2111" ph="窗体的四种(生命周期)状态" />
+                <marker date="1516929568780" expanded="true" signature="826:879" ph="/// 显示状态 ... " />
+                <marker date="1516929568780" expanded="true" signature="914:1199" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="1058:1192" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="1209:1262" ph="/// 隐藏状态 ... " />
+                <marker date="1516929568780" expanded="true" signature="1296:1535" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="1437:1525" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="1545:1600" ph="/// 重新显示状态 ... " />
+                <marker date="1516929568780" expanded="true" signature="1637:1931" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="1786:1921" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="1941:1994" ph="/// 冻结状态 ... " />
+                <marker date="1516929568780" expanded="true" signature="2028:2090" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="2121:4603" ph="封装子类常用的方法" />
+                <marker date="1516929568780" expanded="true" signature="2148:2310" ph="/// 注册按钮事件 ... " />
+                <marker date="1516929568780" expanded="true" signature="2420:2704" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="2589:2689" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="2714:2815" ph="/// 打开UI窗体 ... " />
+                <marker date="1516929568780" expanded="true" signature="2865:2943" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="2953:3010" ph="/// 关闭当前UI窗体 ... " />
+                <marker date="1516929568780" expanded="true" signature="3044:3522" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="3311:3446" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="3532:3730" ph="/// 发送消息 ... " />
+                <marker date="1516929568780" expanded="true" signature="3811:3961" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="3971:4121" ph="/// 接收消息 ... " />
+                <marker date="1516929568780" expanded="true" signature="4213:4290" ph="{...}" />
+                <marker date="1516929568780" expanded="true" signature="4300:4391" ph="/// 显示语言 ... " />
+                <marker date="1516929568780" expanded="true" signature="4426:4586" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Frameworks/SUIFW/UIManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+              <folding>
+                <marker date="1516929568801" expanded="true" signature="0:293" ph="/* Title: &quot;SUIFW&quot; UI框架项目 ... */" />
+                <marker date="1516929568801" expanded="false" signature="300:372" ph="..." />
+                <marker date="1516929568801" expanded="true" signature="389:15714" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="432:15701" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="1177:1262" ph="/// 得到实例 ... " />
+                <marker date="1516929568801" expanded="true" signature="1305:1479" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="1342:1445" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="1539:2741" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="2751:2966" ph="/// 显示（打开）UI窗体 ... " />
+                <marker date="1516929568801" expanded="true" signature="3014:4194" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="3410:3473" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="3578:4184" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="4204:4310" ph="/// 关闭（返回上一个）窗体 ... " />
+                <marker date="1516929568801" expanded="true" signature="4362:5300" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="4766:5290" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="5310:6466" ph="显示“UI管理器”内部核心数据，测试使用" />
+                <marker date="1516929568801" expanded="true" signature="5357:5453" ph="/// 显示&quot;所有UI窗体&quot;集合的数量 ... " />
+                <marker date="1516929568801" expanded="true" signature="5493:5688" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="5543:5616" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="5616:5675" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="5698:5792" ph="/// 显示&quot;当前窗体&quot;集合中数量 ... " />
+                <marker date="1516929568801" expanded="true" signature="5837:6068" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="5895:5976" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="5993:6047" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="6078:6173" ph="/// 显示“当前栈”集合中窗体数量 ... " />
+                <marker date="1516929568801" expanded="true" signature="6223:6446" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="6277:6354" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="6371:6425" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="6476:15694" ph="私有方法" />
+                <marker date="1516929568801" expanded="true" signature="6561:6656" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="6666:6876" ph="/// 根据UI窗体的名称，加载到“所有UI窗体”缓存集合中 ... " />
+                <marker date="1516929568801" expanded="true" signature="6947:7275" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="7130:7237" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="7285:7595" ph="/// 加载指定名称的“UI窗体” ... " />
+                <marker date="1516929568801" expanded="true" signature="7649:9823" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="8065:8189" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="8312:9550" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="8440:8623" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="8686:9323" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="9567:9720" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="9845:9964" ph="/// 把当前窗体加载到“当前窗体”集合中 ... " />
+                <marker date="1516929568801" expanded="true" signature="10022:10658" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="10477:10651" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="10669:10775" ph="/// UI窗体入栈 ... " />
+                <marker date="1516929568801" expanded="true" signature="10833:11595" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="10997:11153" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="11298:11477" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="11605:11711" ph="/// 退出指定UI窗体 ... " />
+                <marker date="1516929568801" expanded="true" signature="11766:12148" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="12211:12830" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="12266:12591" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="12642:12820" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="12840:12965" ph="/// (“隐藏其他”属性)打开窗体，且隐藏其他窗体 ... " />
+                <marker date="1516929568801" expanded="true" signature="13029:14016" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="13496:13557" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="13618:13678" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="13836:14006" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="14026:14151" ph="/// (“隐藏其他”属性)关闭窗体，且显示其他窗体 ... " />
+                <marker date="1516929568801" expanded="true" signature="14217:14939" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="14741:14805" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="14866:14929" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="14949:15043" ph="/// 是否清空“栈集合”中得数据 ... " />
+                <marker date="1516929568801" expanded="true" signature="15082:15329" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="15167:15292" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="15339:15403" ph="/// 初始化“UI窗体预设”路径数据 ... " />
+                <marker date="1516929568801" expanded="true" signature="15443:15677" ph="{...}" />
+                <marker date="1516929568801" expanded="true" signature="15587:15670" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIType.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Frameworks/SUIFW/UIType.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-192">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1516929568803" expanded="true" signature="0:198" ph="/* Title: &quot;SUIFW&quot; UI框架项目 ... */" />
+                <marker date="1516929568803" expanded="false" signature="205:277" ph="..." />
+                <marker date="1516929568803" expanded="true" signature="294:646" ph="{...}" />
+                <marker date="1516929568803" expanded="true" signature="318:644" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Frameworks/SUIFW/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Frameworks/SUIFW/UIType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Frameworks/SUIFW/BaseUIForm.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1440" />
+    <option name="height" value="854" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Unity3dPureMVC (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Unity3dPureMVC (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Unity3dPureMVC (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Unity3dPureMVC (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Unity3dPureMVC (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Frameworks" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Unity3dPureMVC (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Frameworks" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SUIFW" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Unity3dPureMVC (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Frameworks" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SUIFW" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Log" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4366099-17a2-472c-b415-dd20d66b7602" name="Default" comment="" />
+      <created>1516932861022</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1516932861022</updated>
+      <workItem from="1516932872513" duration="2205000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2205000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.359491" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18710022" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10710499" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Frameworks/SUIFW/UIManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+          <folding>
+            <marker date="1516929568801" expanded="true" signature="0:293" ph="/* Title: &quot;SUIFW&quot; UI框架项目 ... */" />
+            <marker date="1516929568801" expanded="false" signature="300:372" ph="..." />
+            <marker date="1516929568801" expanded="true" signature="389:15714" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="432:15701" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="1177:1262" ph="/// 得到实例 ... " />
+            <marker date="1516929568801" expanded="true" signature="1305:1479" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="1342:1445" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="1539:2741" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="2751:2966" ph="/// 显示（打开）UI窗体 ... " />
+            <marker date="1516929568801" expanded="true" signature="3014:4194" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="3410:3473" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="3578:4184" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="4204:4310" ph="/// 关闭（返回上一个）窗体 ... " />
+            <marker date="1516929568801" expanded="true" signature="4362:5300" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="4766:5290" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="5310:6466" ph="显示“UI管理器”内部核心数据，测试使用" />
+            <marker date="1516929568801" expanded="true" signature="5357:5453" ph="/// 显示&quot;所有UI窗体&quot;集合的数量 ... " />
+            <marker date="1516929568801" expanded="true" signature="5493:5688" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="5543:5616" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="5616:5675" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="5698:5792" ph="/// 显示&quot;当前窗体&quot;集合中数量 ... " />
+            <marker date="1516929568801" expanded="true" signature="5837:6068" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="5895:5976" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="5993:6047" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="6078:6173" ph="/// 显示“当前栈”集合中窗体数量 ... " />
+            <marker date="1516929568801" expanded="true" signature="6223:6446" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="6277:6354" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="6371:6425" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="6476:15694" ph="私有方法" />
+            <marker date="1516929568801" expanded="true" signature="6561:6656" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="6666:6876" ph="/// 根据UI窗体的名称，加载到“所有UI窗体”缓存集合中 ... " />
+            <marker date="1516929568801" expanded="true" signature="6947:7275" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="7130:7237" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="7285:7595" ph="/// 加载指定名称的“UI窗体” ... " />
+            <marker date="1516929568801" expanded="true" signature="7649:9823" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="8065:8189" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="8312:9550" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="8440:8623" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="8686:9323" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="9567:9720" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="9845:9964" ph="/// 把当前窗体加载到“当前窗体”集合中 ... " />
+            <marker date="1516929568801" expanded="true" signature="10022:10658" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="10477:10651" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="10669:10775" ph="/// UI窗体入栈 ... " />
+            <marker date="1516929568801" expanded="true" signature="10833:11595" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="10997:11153" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="11298:11477" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="11605:11711" ph="/// 退出指定UI窗体 ... " />
+            <marker date="1516929568801" expanded="true" signature="11766:12148" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="12211:12830" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="12266:12591" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="12642:12820" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="12840:12965" ph="/// (“隐藏其他”属性)打开窗体，且隐藏其他窗体 ... " />
+            <marker date="1516929568801" expanded="true" signature="13029:14016" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="13496:13557" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="13618:13678" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="13836:14006" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="14026:14151" ph="/// (“隐藏其他”属性)关闭窗体，且显示其他窗体 ... " />
+            <marker date="1516929568801" expanded="true" signature="14217:14939" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="14741:14805" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="14866:14929" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="14949:15043" ph="/// 是否清空“栈集合”中得数据 ... " />
+            <marker date="1516929568801" expanded="true" signature="15082:15329" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="15167:15292" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="15339:15403" ph="/// 初始化“UI窗体预设”路径数据 ... " />
+            <marker date="1516929568801" expanded="true" signature="15443:15677" ph="{...}" />
+            <marker date="1516929568801" expanded="true" signature="15587:15670" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Frameworks/SUIFW/UIType.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1516929568803" expanded="true" signature="0:198" ph="/* Title: &quot;SUIFW&quot; UI框架项目 ... */" />
+            <marker date="1516929568803" expanded="false" signature="205:277" ph="..." />
+            <marker date="1516929568803" expanded="true" signature="294:646" ph="{...}" />
+            <marker date="1516929568803" expanded="true" signature="318:644" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Frameworks/SUIFW/BaseUIForm.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1342">
+          <caret line="72" column="9" lean-forward="false" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
+          <folding>
+            <marker date="1516929568780" expanded="true" signature="0:375" ph="/* Title: &quot;SUIFW&quot; UI框架项目 ... */" />
+            <marker date="1516929568780" expanded="false" signature="382:490" ph="..." />
+            <marker date="1516929568780" expanded="true" signature="507:4612" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="551:4610" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="688:783" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="794:2111" ph="窗体的四种(生命周期)状态" />
+            <marker date="1516929568780" expanded="true" signature="826:879" ph="/// 显示状态 ... " />
+            <marker date="1516929568780" expanded="true" signature="914:1199" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="1058:1192" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="1209:1262" ph="/// 隐藏状态 ... " />
+            <marker date="1516929568780" expanded="true" signature="1296:1535" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="1437:1525" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="1545:1600" ph="/// 重新显示状态 ... " />
+            <marker date="1516929568780" expanded="true" signature="1637:1931" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="1786:1921" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="1941:1994" ph="/// 冻结状态 ... " />
+            <marker date="1516929568780" expanded="true" signature="2028:2090" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="2121:4603" ph="封装子类常用的方法" />
+            <marker date="1516929568780" expanded="true" signature="2148:2310" ph="/// 注册按钮事件 ... " />
+            <marker date="1516929568780" expanded="true" signature="2420:2704" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="2589:2689" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="2714:2815" ph="/// 打开UI窗体 ... " />
+            <marker date="1516929568780" expanded="true" signature="2865:2943" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="2953:3010" ph="/// 关闭当前UI窗体 ... " />
+            <marker date="1516929568780" expanded="true" signature="3044:3522" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="3311:3446" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="3532:3730" ph="/// 发送消息 ... " />
+            <marker date="1516929568780" expanded="true" signature="3811:3961" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="3971:4121" ph="/// 接收消息 ... " />
+            <marker date="1516929568780" expanded="true" signature="4213:4290" ph="{...}" />
+            <marker date="1516929568780" expanded="true" signature="4300:4391" ph="/// 显示语言 ... " />
+            <marker date="1516929568780" expanded="true" signature="4426:4586" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
